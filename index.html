@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | 3-column preview card component</title>
+  
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    /* *{
+      outline: 1px solid red;
+    } */
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    body{
+      background: hsl(0, 0%, 95%);
+      min-height: 100vh;
+
+    }
+.container{
+  
+  display: grid;
+  grid-template-columns: [line1] 1em [line2] 302px [line3] 1em [end];
+  grid-auto-rows: minmax(440px, auto);
+  justify-content: center;
+  align-content: center;
+   
+}
+.box1{
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+grid-column: 2/3;
+grid-row: 1/2;
+background: hsl(31, 77%, 52%);
+max-width: 280px;
+
+
+}
+.box2{
+grid-column: 2/3;
+grid-row: 2/3;
+background: hsl(184, 100%, 22%);
+max-width: 280px;
+
+}
+
+
+.box3{
+border-bottom-left-radius:  10px;
+border-bottom-right-radius: 10px;
+grid-column: 2/3;
+grid-row: 3/4;
+background: hsl(179, 100%, 13%);
+max-width: 280px;
+
+}
+
+
+.logo{
+  margin-top: 3em;
+  margin-left: 3em;
+  margin-right: 3em;
+}
+
+.heading{
+  font-family: 'Big Shoulders Display', cursive;
+  color: hsla(0, 0%, 100%, 0.75);
+  font-size: 2em;
+  margin-top: 1.5em;
+  margin-left: 1.4em;
+  margin-right: 3em;
+  
+  
+}
+.content{
+  font-family: 'Lexend Deca', sans-serif;
+  color: hsla(0, 0%, 100%, 0.75);
+  
+  Font-size: 15px;
+  line-height: 1.5; 
+  margin-top: 1.5em;
+  margin-left: 2.7em;
+  margin-right: 3em;
+  margin-bottom: 2em;
+  
+ 
+ 
+}
+.button{
+  border: none;
+  width:145px;
+  height: 45px;
+  border-radius: 3em;
+  background: hsl(0, 0%, 95%);
+  text-align: center;
+  font-family: 'Lexend Deca', sans-serif;
+  Font-size: medium;
+  margin-top: 2em;
+  margin-left: 3em;
+  margin-right: 3em;
+  margin-bottom: 3em;
+  justify-self: left;
+
+}
+.footer{
+  position:absolute;
+  background:#063;
+  bottom:0px;
+  right:50vh;
+  grid-column: 2/3;
+grid-row: 2/3;
+}
+
+@media screen and (min-width: 600px) {
+
+  body{
+      background: hsl(0, 0%, 95%);
+      min-height: 100vh;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    }
+ 
+    .container{
+ 
+  display:flex;
+ 
+  
+}
+.box1{
+
+background: hsl(31, 77%, 52%);
+max-width: 290px;
+border-radius: 10px 0px 0px 10px;
+
+}
+.box2{
+background: hsl(184, 100%, 22%);
+max-width: 290px;
+
+}
+
+
+.box3{
+background: hsl(179, 100%, 13%);
+max-width: 290px;
+border-radius: 0px 10px 10px 0px;
+}
+
+
+
+}
+  </style>
+</head>
+<body>
+
+
+<div class="container">
+
+  <div class="box box1">
+    
+    <div class="logo" >
+      <img src="images/icon-sedans.svg" alt="sedans" width="auto" height="auto">
+    </div>
+  <div class="heading">SEDANS</div>
+  <div class="content">
+    Choose a sedan for its 
+   affordability and excellent fuel 
+   economy. Ideal for cruising in 
+   the city or on your next road trip.
+  </div>
+  <div >
+<button class="button" style="color:hsl(31, 77%, 52%) ;">Learn More</button>
+  </div>
+  
+  
+</div>
+
+
+<div class="box box2">
+  <div class="logo" >
+    <img src="images/icon-suvs.svg" alt="suvs" width="auto" height="auto">
+  </div>
+<div class="heading">SUVS</div>
+<div class="content">
+Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation 
+  and off-road adventures.
+</div>
+
+<div >
+  <button class="button" style="color:hsl(184, 100%, 22%) ;">Learn More</button>
+    </div>
+  </div>
+
+<div class="box box3"> 
+  <div class="logo" >
+    <img src="images/icon-luxury.svg" alt="luxury" width="auto" height="auto">
+  </div>
+<div class="heading">LUXURY</div>
+<div class="content">
+  Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury 
+  rental and arrive in style.
+</div>  
+<div >
+  <button class="button" style="color:hsl(179, 100%, 13%);">Learn More</button>
+    </div>
+</div>
+
+
+
+</div>
+
+</div>
+
+
+
+
+ 
+
+  
+</body>
+</html>
